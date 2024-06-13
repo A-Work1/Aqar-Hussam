@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    background-color: white;
+    
+}
+.contenar{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    overflow: hidden;
+} 
+.contenar h1{
+    text-align: center;
+    color: #2C3333;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+/**************************************************/
+.page{
+    height: 100vh;
+}
+.page::before{
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #17402E, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #17402E, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0deg, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 3s ease-in-out infinite alternate;
+}
+@keyframes waving {
+    from{
+        transform: translateX(-50%) skew(0deg, -10deg);
+    }
+    to{
+        transform: translateX(-30%) skew(10deg, 0deg);
+    }
+}
+/*********************************************************************/
+.title{
+    width: 100%;
+    text-align: center;
+}
+.title img{
+    width: 150px;
+    margin-bottom: 20px;
+}
+.title p{
+    font-size: 18px;
+    color: #17402E;
+}
+/*******************************************************/
+.buttons{
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    padding: 0 8px;
+}
+.buttons a{
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    color: white;
+    border-radius: 12px;
+    background-color: #987D5A;
+    box-shadow: inset 0 0 0 0 #987D5A;
+    transition:ease-out 0.3s;
+    outline: none;
+    font-weight: 700;
+}
+.buttons a:hover{
+    box-shadow: inset 300px 0 0 0 #17402E;
+    color: white;
+    box-shadow: 0;
+}
+
+.buttons a span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons a span img{
+    width: 60px;
+    margin-right: 10px;
+}
+.buttons a i{
+    font-size: 22px;
+}
+/**********************************************************/
+.end{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end span{
+    color: #969696;
+    font-weight: 700;
+    font-size: 13px;
+}
+@media only screen and (max-width:950px){
+    .contenar{
+        width: 100%;
+        padding: 0 10px;    
+    } 
+    .contenar h1{
+        font-size: 17px;
+    }
+    .title img{
+        width: 120px;
+    }
+    .title p{
+        font-size: 14px;
+    }
+}
